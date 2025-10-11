@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lee's Lens</title>
+<link rel="stylesheet" href="post.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Lee's Lens</div>
+
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="blog.html" class="active">Blogs</a>
+    <a href="write.html">Write a Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+<section class="post-full">
+  <div class="post-container">
+    <div class="post-image">
+      <img src="https://i.postimg.cc/QM3wfxMb/nature.jpg" alt="Meetup">
+      <img src="https://i.postimg.cc/MpDNrJjK/nature-2.jpg" alt="Meetup Group">
+    </div>
+    <div class="post-content">
+      <h1>Nature : A spot of Peace</h1>
+      <p>One evening, after a long and tiring week, I decided to take a quiet walk near a small hill. The sun was slowly setting, painting the sky. I remember sitting under a big tree, feeling the cool breeze touch my face, and for the first time in a while everything felt still.
+        That moment taught me that peace isn’t always found in faraway places or big achievements; sometimes, it’s right around us in the way sunlight falls through the trees, in the sound of flowing water, or in the smell of fresh soil after rain.
+        There was no noise, no rush, no pressure to do anything. Just me, the whisper of leaves, and the soft chirping of birds returning home. In that silence, I realized how much peace nature holds something we often overlook in our busy lives.
+        Since then, I’ve made it a habit to spend a few minutes each day outdoors watching the sky, listening to nature, or simply sitting quietly. It clears my mind, refreshes my heart, and reminds me that no matter how chaotic life gets, nature always finds a way to stay calm and beautiful</p>
+      
+
+      <div class="post-actions">
+        <button class="btn" id="likeBtn">❤️ <span id="likeCount">24</span></button>
+        <button class="btn" id="saveBtn">💾 Save to Journal</button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>© <span id="year"></span> Leena — All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

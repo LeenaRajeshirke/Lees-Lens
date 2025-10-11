@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lee's Lens</title>
+<link rel="stylesheet" href="post.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Lee's Lens</div>
+
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navbar">
+    <a href="index.html" >Home</a>
+    <a href="blog.html" class="active">Blogs</a>
+    <a href="write.html">Write a Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+<section class="post-full">
+  <div class="post-container">
+    <div class="post-image">
+      <img src="https://i.postimg.cc/rsfqkRDq/meetup-2.jpg" alt="Meetup">
+      <img src="https://i.postimg.cc/50c07zzx/meetup.jpg" alt="Meetup Group">
+    </div>
+    <div class="post-content">
+      <h1>My First Professional Meetup</h1>
+      <p>I attended a Coding Adda meetup, and it turned out to be an inspiring experience. The focus of the meetup was bringing tech enthusiasts together—people who are passionate about coding, development, and creating meaningful projects.
+        The main discussion was about starting a platform to form teams, create projects, and connect tech enthusiasts. The speaker emphasized how teamwork and networking are just as important as technical skills. Ideas flowed freely, and everyone contributed suggestions on how such a platform could help people learn, innovate, and showcase their work.
+        The session began with introductions, where everyone shared their backgrounds and areas of interest. It was fascinating to see people from different fields—AI, web development, and software engineering—all coming together with the same goal: to collaborate and learn from each other.
+        It was a reminder that sometimes, the greatest growth happens not just from coding alone, but from collaborating with people who share your passion. I’m looking forward to the next meetup and seeing this idea of a tech community come to life
+        What I loved the most was the sense of community. It wasn’t about competition; it was about sharing knowledge, exploring ideas, and motivating each other to turn concepts into reality. By the end of the meetup, I felt energized and excited about joining forces with others to work on meaningful projects.
+
+      <div class="post-actions">
+        <button class="btn" id="likeBtn">❤️ <span id="likeCount">24</span></button>
+        <button class="btn" id="saveBtn">💾 Save to Journal</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Leena — All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

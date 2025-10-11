@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lee's Lens</title>
+  <link rel="stylesheet" href="write.css">
+</head>
+<body>
+  
+  <header>
+    <div class="logo">Lee's Lens</div>
+    <nav id="nav">
+      <a href="index.html" >Home</a>
+      <a href="blog.html">Blogs</a>
+      <a href="write.html" class="active">Write a Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="write-section">
+    <div class="write-container">
+      <h2>🖋️ Create Your Blog Post</h2>
+      <p class="subtitle">Share your thoughts, experiences, or stories with the world!</p>
+
+      <form id="blogForm">
+        <div class="form-group">
+          <label for="title">Blog Title</label>
+          <input type="text" id="title" placeholder="Enter your blog title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Cover Image URL</label>
+          <input type="url" id="image" placeholder="Paste image link (e.g. https://...)" required>
+        </div>
+
+        <div class="form-group">
+          <label for="content">Your Story</label>
+          <textarea id="content" rows="8" placeholder="Write your blog content here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Publish Post</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Lee's Lens — A Journey Through Stories</p>
+  </footer>
+
+<script src="write.js"></script>
+</body>
+</html>

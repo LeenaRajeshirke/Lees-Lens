@@ -1,0 +1,286 @@
+body { 
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #fdfaf5;
+  color: #1c1c1c;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #050000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #f9d342;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #f9d342;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #f9d342;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+.intro {
+  background: url('https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=1200&auto=format&fit=crop')
+    no-repeat center center/cover;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 0 0 40px 40px;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  border-radius: 0 0 40px 40px;
+}
+
+.intro-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  max-width: 750px;
+  padding: 0 20px;
+}
+
+.intro-text h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.intro-text p {
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: #f9d342;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.about-block {
+  text-align: center;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.about-block h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-block p {
+  font-size: 17px;
+  color: #555;
+}
+
+.featured {
+  text-align: center;
+  background: #fff;
+  padding: 70px 20px;
+}
+
+.featured h2 {
+  font-size: 26px;
+  margin-bottom: 35px;
+  color: #222;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.post {
+  background: #fdfaf5;
+  border-radius: 16px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.post h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.post p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.subscribe {
+  background: #050000;
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.subscribe h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.subscribe p {
+  color: #ddd;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  width: 260px;
+  font-size: 15px;
+}
+
+.subscribe-form button {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f9d342;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.subscribe-message {
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.subscribe-message.success {
+  color: #9fff9c;
+}
+
+.subscribe-message.error {
+  color: #ff7b7b;
+}
+
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 25px;
+  font-size: 15px;
+  color: #444;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #050000;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .intro-text h1 {
+    font-size: 26px;
+  }
+
+  .post {
+    width: 100%;
+    max-width: 320px;
+  }
+}

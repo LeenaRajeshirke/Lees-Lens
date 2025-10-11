@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lee's Lens</title>
+<link rel="stylesheet" href="post.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Lee's Lens</div>
+
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="blog.html" class="active">Blogs</a>
+    <a href="write.html">Write a Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+<section class="post-full">
+  <div class="post-container">
+    <div class="post-image">
+      <img src="https://i.postimg.cc/L6JVFB13/life-long.jpg" alt="Meetup">
+      <img src="https://i.postimg.cc/Sxrfpyr7/life-long-1.jpg" alt="Meetup Group">
+    </div>
+    <div class="post-content">
+      <h1>Life Long Learners</h1>
+      <p>That day at the Life Long Learner meetup I felt a sparkle I hadn't felt before. I learned to speak clearly, to listen with intention, and to believe that small acts can change a story. After the meetup I booked a ticket for my first solo trip it felt like the world opened up.</p>
+      <p>During the meetup, I shared a short talk, received encouraging feedback, and met people who later became travel companions. It was the first time I realized my voice mattered and I promised myself to travel bravely and help others along the way.</p>
+      <p>Meeting so many inspiring people made me reflect on courage, kindness, and the joy of small interactions. Each conversation reminded me that travel is not only about places, but about growth and connection.</p>
+
+      <div class="post-actions">
+        <button class="btn" id="likeBtn">❤️ <span id="likeCount">24</span></button>
+        <button class="btn" id="saveBtn">💾 Save to Journal</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Leena — All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
