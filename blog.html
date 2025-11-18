@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lee's Diary</title>
 <link rel="stylesheet" href="blog.css">
 </head>
 <body>
 
-<header>
+<nav class="nav">
   <div class="logo">Lee's Diary</div>
 
-  <div class="menu-toggle" id="menuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <ul class="links" id="links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html" class="active">Blogs</a></li>
+    <li><a href="write.html">Write a Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 
-  <nav id="navbar">
-    <a href="index.html">Home</a>
-    <a href="blog.html" class="active">Blogs</a>
-    <a href="write.html">Write a Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
+  <div class="menu_toggle" id="menuToggle">&#9776;</div>
+</nav>
 
 <section class="blog-list">
   <h2 class="blog-heading">My Blogs</h2>
@@ -35,12 +30,14 @@
       <p>That meetup changed everything...</p>
       <a href="post1.html" class="btn">Read More</a>
     </div>
+
     <div class="blog-card">
       <img src="https://i.postimg.cc/QM3wfxMb/nature.jpg" alt="Goa">
       <h3>Nature : A spot of Peace</h3>
       <p>Feeling the beauty of nature...</p>
       <a href="post2.html" class="btn">Read More</a>
     </div>
+
     <div class="blog-card">
       <img src="https://i.postimg.cc/50c07zzx/meetup.jpg" alt="Street Food">
       <h3>My First Professional Meetup</h3>
@@ -54,17 +51,6 @@
   <p>© <span id="year"></span> Leena — All rights reserved.</p>
 </footer>
 
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-const menuToggle = document.getElementById("menuToggle");
-const nav = document.getElementById("navbar");
-
-menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("show");
-  menuToggle.classList.toggle("active");
-});
-
-</script>
+<script src="blog.js" defer></script>
 </body>
-
 </html>
