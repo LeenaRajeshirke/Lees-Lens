@@ -3,25 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lee's Diary</title>
+  <title>Lee's Lens</title>
   <link rel="stylesheet" href="write.css">
 </head>
 <body>
   
-  <header>
-    <div class="logo">Lee's Diary</div>
-    <nav id="nav">
-      <a href="index.html" >Home</a>
-      <a href="blog.html">Blogs</a>
-      <a href="write.html" class="active">Write a Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
+  <nav class="nav">
+  <div class="logo">Lee's Diary</div>
+
+  <ul class="links" id="links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html">Blogs</a></li>
+    <li><a href="write.html" class="active">Write a Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="menu_toggle" id="menuToggle">&#9776;</div>
+</nav>
 
   <section class="write-section">
     <div class="write-container">
@@ -50,10 +48,9 @@
   </section>
 
   <footer>
-    <p>© <span id="year"></span> Lee's Diary — A Journey Through Stories</p>
+    <p>© <span id="year"></span> Lee's Lens — A Journey Through Stories</p>
   </footer>
 
 <script src="write.js"></script>
 </body>
-
 </html>
