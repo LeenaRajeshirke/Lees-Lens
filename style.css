@@ -1,65 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Great+Vibes&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body { 
   font-family: 'Poppins', sans-serif;
-  margin: 0;
   background-color: #fdfaf5;
   color: #1c1c1c;
+  overflow-x: hidden;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background: #050000;
-  position: sticky;
+.nav {
+  position: fixed;
   top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  color: #f9d342;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-nav a {
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #050000;
   color: #fff;
-  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f9d342;
+  letter-spacing: 1px;
+}
+
+.log_btn {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 10px 25px;
+  background: #f9d342;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
   text-decoration: none;
-  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.log_btn:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
   transition: 0.3s;
 }
 
-nav a:hover,
-nav a.active {
+.links li a:hover,
+.links li a.active {
   color: #f9d342;
 }
 
-.menu-toggle {
+.menu_toggle {
   display: none;
-  flex-direction: column;
+  font-size: 28px;
+  color: #f9d342;
   cursor: pointer;
-  gap: 5px;
-}
-
-.menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background: #f9d342;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
 }
 
 .intro {
@@ -71,6 +89,7 @@ nav a.active {
   justify-content: center;
   position: relative;
   border-radius: 0 0 40px 40px;
+  margin-top: 80px;
 }
 
 .intro::before {
@@ -229,7 +248,6 @@ nav a.active {
   margin-top: 15px;
   font-size: 15px;
   font-weight: 500;
-  transition: all 0.3s ease;
 }
 
 .subscribe-message.success {
@@ -249,38 +267,31 @@ footer {
   box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  nav {
+@media (max-width: 1024px) {
+  .links {
     display: none;
     flex-direction: column;
-    width: 100%;
-    background: #050000;
     position: absolute;
-    top: 65px;
-    left: 0;
-    text-align: center;
-    padding: 15px 0;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .intro-text h1 {
-    font-size: 26px;
-  }
-
-  .post {
+    top: 80px;
+    right: 0;
+    background: #050000;
     width: 100%;
-    max-width: 320px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 22px;
+    gap: 30px;
+    z-index: 10;
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  .menu_toggle {
+    display: block;
+  }
+
+  .log_btn {
+    display: none;
   }
 }
