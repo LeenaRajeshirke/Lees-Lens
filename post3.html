@@ -8,29 +8,23 @@
 </head>
 <body>
 
-<header>
-  <div class="logo">Lee's Lens</div>
+<nav class="nav">
+  <div class="logo">Lee's Diary</div>
 
-  <div class="menu-toggle" id="menuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <ul class="links" id="links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html" class="active">Blogs</a></li>
+    <li><a href="write.html">Write a Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 
-  <nav id="navbar">
-    <a href="index.html" >Home</a>
-    <a href="blog.html" class="active">Blogs</a>
-    <a href="write.html">Write a Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
+  <div class="menu_toggle" id="menuToggle">&#9776;</div>
+</nav>
 
 <section class="post-full">
   <div class="post-container">
     <div class="post-image">
-      <img src="https://i.postimg.cc/rsfqkRDq/meetup-2.jpg" alt="Meetup">
-      <img src="https://i.postimg.cc/50c07zzx/meetup.jpg" alt="Meetup Group">
+      <img src="https://i.postimg.cc/50c07zzx/meetup.jpg" alt="Meetup">
     </div>
     <div class="post-content">
       <h1>My First Professional Meetup</h1>
@@ -52,9 +46,6 @@
   <p>© <span id="year"></span> Leena — All rights reserved.</p>
 </footer>
 
-<script src="script.js"></script>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<script src="post.js"></script>
 </body>
 </html>
