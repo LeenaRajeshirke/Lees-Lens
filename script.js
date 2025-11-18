@@ -1,11 +1,12 @@
-const menuToggle = document.getElementById("menuToggle");
-const nav = document.getElementById("navbar");
+// menu toggle
+const menuToggle = document.querySelector('.menu_toggle');
+const navLinks = document.querySelector('.links');
 
-menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("show");
-  menuToggle.classList.toggle("active");
-});
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
 
+//form
 const form = document.getElementById('subscribeForm');
 const emailInput = document.getElementById('subscriberEmail');
 const message = document.getElementById('subscribeMessage');
