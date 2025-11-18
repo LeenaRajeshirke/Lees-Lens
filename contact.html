@@ -3,25 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lee's Diary</title>
+  <title>Lee's Lens</title>
   <link rel="stylesheet" href="contact.css">
 </head>
 <body>
+  
+<nav class="nav">
+  <div class="logo">Lee's Diary</div>
 
- <header>
-    <div class="logo">Lee's Diary</div>
-    <nav id="nav">
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blogs</a>
-      <a href="write.html">Write a Blog</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
+  <ul class="links" id="links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html">Blogs</a></li>
+    <li><a href="write.html">Write a Blog</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+
+  <div class="menu_toggle" id="menuToggle">&#9776;</div>
+</nav>
 
 <section class="contact">
   <div class="contact-box">
@@ -55,22 +53,7 @@
   <p>© <span id="year"></span> Leena — All rights reserved.</p>
 </footer>
 
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  alert('Message sent!');
-});
-
- const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav');
-
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      nav.classList.toggle('active');
-    });
-</script>
+<script src="contact.js"></script>
 
 </body>
-
 </html>
