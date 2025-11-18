@@ -1,5 +1,10 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+// Update year
+const yearElement = document.getElementById('year');
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
+//Create post
 document.getElementById("blogForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -27,10 +32,12 @@ document.getElementById("blogForm").addEventListener("submit", function (e) {
   this.reset();
 });
 
-  const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav');
+// Menu toggle
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("links");
 
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      nav.classList.toggle('active');
-    });
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
